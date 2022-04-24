@@ -1,8 +1,9 @@
 import DivContainer from "./DivContainer";
-const Train = ({ trainList }) => {
-  /* const ref = useRef(null);
+const Cruise = ({ cruiseList }) => {
+  /*   const ref = useRef(null);
   const [moreShow, setMoreShow] = useState(false);
   useEffect(() => {
+    console.log(ref.current.offsetWidth);
     if (ref.current.offsetWidth > 800) {
       setMoreShow(true);
     } else {
@@ -11,15 +12,15 @@ const Train = ({ trainList }) => {
   }, []); */
   return (
     <>
-      {trainList.length > 0 && (
-        <DivContainer TrainLable="鐵道規格" trainList={trainList} />
+      {cruiseList.length > 0 && (
+        <DivContainer TrainLable="郵輪規格" trainList={cruiseList} />
       )}
       {/*  <div className="productDiv ty">
-      <h3>鐵道規格</h3>
+      <h3>郵輪規格</h3>
       <div className="productBtnContainer">
         <ul className="productBtnContainer test" ref={ref}>
-          {trainList.length > 0 &&
-            trainList.map((item) => <Button key={item.TagName} item={item} />)}
+          {cruiseList.length > 0 &&
+            cruiseList.map((item) => <Button key={item.TagName} item={item} />)}
         </ul>
       </div>
 
@@ -31,9 +32,9 @@ const Train = ({ trainList }) => {
           </>
         )}
       </div>
-    </div>  */}
+    </div> */}
     </>
   );
 };
 
-export default Train;
+export default Cruise;

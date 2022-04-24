@@ -3,6 +3,8 @@ import axios from "axios";
 import "./styles/all.css";
 import Transport from "./components/Transport";
 import Train from "./components/Train";
+import Cruise from "./components/Cruise";
+import Product from "./components/Product";
 function App() {
   const [productList, setProductList] = useState([]);
   const [marketList, setMarketList] = useState([]);
@@ -55,6 +57,8 @@ function App() {
       <div className="tab_innerContainer">
         <Transport />
         {trainList.length > 0 && <Train trainList={trainList} />}
+        {cruiseList.length > 0 && <Cruise cruiseList={cruiseList} />}
+        {productList.length > 0 && <Product productList={productList} />}
       </div>
     </div>
   );
