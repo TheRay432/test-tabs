@@ -1,0 +1,245 @@
+[
+  {
+    "CategoryName": "元件",
+    "CategoryCode": "01",
+    "CategorySort": 1,
+    "TypeList": [
+      {
+        "TypeName": "交通",
+        "TypeCode": "01",
+        "TypeSort": 1,
+        "TripTypeName": null,
+        "TripTypeCode": null,
+        "TripTypeSort": 0,
+        "GroupList": [
+          {
+            "GroupName": "主交通",
+            "GroupNo": "1065",
+            "GroupSort": 1,
+            "TagList": [
+              {
+                "TagName": "三排椅巴士",
+                "TagNo": "1201",
+                "TagSort": 1,
+                "IsDelete": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "TypeName": "宿",
+        "TypeCode": "03",
+        "TypeSort": 4,
+        "TripTypeName": null,
+        "TripTypeCode": null,
+        "TripTypeSort": 0,
+        "GroupList": [
+          {
+            "GroupName": "住宿",
+            "GroupNo": "1057",
+            "GroupSort": 3,
+            "TagList": [
+              {
+                "TagName": "五星旅宿",
+                "TagNo": "1184",
+                "TagSort": 1,
+                "IsDelete": false
+              },
+              {
+                "TagName": "特色旅宿",
+                "TagNo": "1185",
+                "TagSort": 2,
+                "IsDelete": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "TypeName": "遊",
+        "TypeCode": "04",
+        "TypeSort": 5,
+        "TripTypeName": null,
+        "TripTypeCode": null,
+        "TripTypeSort": 0,
+        "GroupList": [
+          {
+            "GroupName": "藝術",
+            "GroupNo": "1066",
+            "GroupSort": 1,
+            "TagList": [
+              {
+                "TagName": "音樂",
+                "TagNo": "1208",
+                "TagSort": 2,
+                "IsDelete": false
+              },
+              {
+                "TagName": "戲劇",
+                "TagNo": "1209",
+                "TagSort": 3,
+                "IsDelete": false
+              }
+            ]
+          },
+          {
+            "GroupName": "知性",
+            "GroupNo": "1067",
+            "GroupSort": 2,
+            "TagList": [
+              {
+                "TagName": "博物館",
+                "TagNo": "1217",
+                "TagSort": 4,
+                "IsDelete": false
+              },
+              {
+                "TagName": "教育課程",
+                "TagNo": "1218",
+                "TagSort": 5,
+                "IsDelete": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CategoryName": "行銷",
+    "CategoryCode": "02",
+    "CategorySort": 2,
+    "TypeList": [
+      {
+        "TypeName": "行銷",
+        "TypeCode": "06",
+        "TypeSort": 8,
+        "TripTypeName": null,
+        "TripTypeCode": null,
+        "TripTypeSort": 0,
+        "GroupList": [
+          {
+            "GroupName": "優惠性",
+            "GroupNo": "20",
+            "GroupSort": 1,
+            "TagList": [
+              {
+                "TagName": "會員限購",
+                "TagNo": "108",
+                "TagSort": 3,
+                "IsDelete": false
+              },
+              {
+                "TagName": "限時優惠",
+                "TagNo": "1195",
+                "TagSort": 4,
+                "IsDelete": false
+              }
+            ]
+          },
+          {
+            "GroupName": "重點系列",
+            "GroupNo": "27",
+            "GroupSort": 2,
+            "TagList": [
+              {
+                "TagName": "親子旅遊",
+                "TagNo": "1197",
+                "TagSort": 2,
+                "IsDelete": false
+              }
+            ]
+          },
+          {
+            "GroupName": "房專用",
+            "GroupNo": "1052",
+            "GroupSort": 4,
+            "TagList": [
+              {
+                "TagName": "買一送一",
+                "TagNo": "1173",
+                "TagSort": 1,
+                "IsDelete": false
+              },
+              {
+                "TagName": "補助",
+                "TagNo": "1174",
+                "TagSort": 2,
+                "IsDelete": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CategoryName": "大交通",
+    "CategoryCode": "03",
+    "CategorySort": 3,
+    "TypeList": [
+      {
+        "TypeName": "鐵路",
+        "TypeCode": "08",
+        "TypeSort": 10,
+        "TripTypeName": "鐵路",
+        "TripTypeCode": "03",
+        "TripTypeSort": 3,
+        "GroupList": [
+          {
+            "GroupName": "台灣鐵道公司",
+            "GroupNo": "24",
+            "GroupSort": 1,
+            "TagList": [
+              {
+                "TagName": "高鐵",
+                "TagNo": "117",
+                "TagSort": 2,
+                "IsDelete": false
+              }
+            ]
+          },
+          {
+            "GroupName": "台灣鐵道線別",
+            "GroupNo": "25",
+            "GroupSort": 2,
+            "TagList": [
+              {
+                "TagName": "南迴線",
+                "TagNo": "122",
+                "TagSort": 3,
+                "IsDelete": false
+              }
+            ]
+          },
+          {
+            "GroupName": "台灣火車名",
+            "GroupNo": "26",
+            "GroupSort": 3,
+            "TagList": [
+              {
+                "TagName": "鳴日號",
+                "TagNo": "125",
+                "TagSort": 1,
+                "IsDelete": false
+              },
+              {
+                "TagName": "自強號",
+                "TagNo": "128",
+                "TagSort": 4,
+                "IsDelete": false
+              },
+              {
+                "TagName": "普悠瑪號",
+                "TagNo": "130",
+                "TagSort": 6,
+                "IsDelete": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
