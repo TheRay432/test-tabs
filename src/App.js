@@ -3,9 +3,7 @@ import axios from "axios";
 import "./styles/all.css";
 import Transport from "./components/Transport";
 import Train from "./components/Train";
-import Cruise from "./components/Cruise";
-import Product from "./components/Product";
-import Market from "./components/Market";
+
 function App() {
   const [productList, setProductList] = useState([]);
   const [marketList, setMarketList] = useState([]);
@@ -16,43 +14,7 @@ function App() {
     state2: false,
     state3: false,
   });
-  /* const getProductInfoData = async () => {
-    const res = await axios.get("data.json");
-    const productTypeList = res.data[0].TypeList;
-    productTypeList.forEach((item) => {
-      const productGroupList = item.GroupList;
-      productGroupList.forEach((item2) => {
-        setProductList((prevData) => [...prevData, ...item2.TagList]);
-      });
-    });
-  };
-  const getMarketInfoData = async () => {
-    const res = await axios.get("data.json");
-    const marketTypeList = res.data[1].TypeList;
-    marketTypeList.forEach((item) => {
-      const marketGroupList = item.GroupList;
-      marketGroupList.forEach((item2) => {
-        setMarketList((prevData) => [...prevData, ...item2.TagList]);
-      });
-    });
-  };
-  const getTrainInfoData = async () => {
-    const res = await axios.get("data.json");
-    const transportTypeList = res.data[2].TypeList;
-    transportTypeList.forEach((item) => {
-      if (item.TypeCode === "07") {
-        const cruiseGroupList = item.GroupList;
-        cruiseGroupList.forEach((item2) => {
-          setCruiseList((prevData) => [...prevData, ...item2.TagList]);
-        });
-      } else if (item.TypeCode === "08") {
-        const transportGroupList = item.GroupList;
-        transportGroupList.forEach((item2) => {
-          setTrainList((prevData) => [...prevData, ...item2.TagList]);
-        });
-      }
-    });
-  }; */
+
   const test = (item, code) => {
     const typeList = item.TypeList;
     typeList.forEach((item2) => {
@@ -92,9 +54,6 @@ function App() {
   };
 
   useEffect(() => {
-    /*  getProductInfoData();
-    getMarketInfoData();
-    getTrainInfoData(); */
     getInfoData();
   }, []);
   return (
@@ -105,13 +64,17 @@ function App() {
           transportActive={transportActive}
         />
         {trainList.length > 0 && transportActive.state1 && (
-          <Train trainList={trainList} />
+          <Train trainList={trainList} Label="鐵道規格" />
         )}
         {cruiseList.length > 0 && transportActive.state3 && (
-          <Cruise cruiseList={cruiseList} />
+          <Train trainList={cruiseList} Label="郵輪規格" />
         )}
-        {productList.length > 0 && <Product productList={productList} />}
-        {marketList.length > 0 && <Market marketList={marketList} />}
+        {productList.length > 0 && (
+          <Train trainList={productList} Label="產品規格" />
+        )}
+        {marketList.length > 0 && (
+          <Train trainList={marketList} Label="行銷活動" />
+        )}
       </div>
     </div>
   );

@@ -11,9 +11,7 @@ const Button = ({ item, setActive, active }) => {
   return (
     <>
       <button
-        className={
-          active?.tName === item.TagName ? "tripBtn active" : "tripBtn"
-        }
+        className={active.tName === item.TagName ? "tripBtn active" : "tripBtn"}
         onClick={() => handleBtnClick(item.TagName)}
       >
         <p>{item.TagName}</p>
