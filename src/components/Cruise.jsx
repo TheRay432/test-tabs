@@ -1,3 +1,4 @@
+import { useState } from "react";
 import DivContainer from "./DivContainer";
 const Cruise = ({ cruiseList }) => {
   /*   const ref = useRef(null);
@@ -10,10 +11,16 @@ const Cruise = ({ cruiseList }) => {
       setMoreShow(false);
     }
   }, []); */
+  const [cruiseActive, setCruiseActive] = useState({ tName: "", state: false });
   return (
     <>
       {cruiseList.length > 0 && (
-        <DivContainer TrainLable="郵輪規格" trainList={cruiseList} />
+        <DivContainer
+          TrainLable="郵輪規格"
+          trainList={cruiseList}
+          setActive={setCruiseActive}
+          active={cruiseActive}
+        />
       )}
       {/*  <div className="productDiv ty">
       <h3>郵輪規格</h3>

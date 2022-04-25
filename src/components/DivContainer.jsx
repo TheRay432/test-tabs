@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
-const DivContainer = ({ TrainLable, trainList }) => {
+const DivContainer = ({ TrainLable, trainList, setActive, active }) => {
   const ref = useRef(null);
   const [moreShow, setMoreShow] = useState(false);
   const [moreState, setmoreState] = useState({ showName: "", state: false });
@@ -27,7 +27,14 @@ const DivContainer = ({ TrainLable, trainList }) => {
       <div className="productBtnContainer">
         <ul className="productBtnContainer test" ref={ref}>
           {trainList.length > 0 &&
-            trainList.map((item) => <Button key={item.TagName} item={item} />)}
+            trainList.map((item) => (
+              <Button
+                key={item.TagName}
+                item={item}
+                active={active}
+                setActive={setActive}
+              />
+            ))}
         </ul>
       </div>
 

@@ -5,11 +5,17 @@ import Transport from "./components/Transport";
 import Train from "./components/Train";
 import Cruise from "./components/Cruise";
 import Product from "./components/Product";
+import Market from "./components/Market";
 function App() {
   const [productList, setProductList] = useState([]);
   const [marketList, setMarketList] = useState([]);
   const [trainList, setTrainList] = useState([]);
   const [cruiseList, setCruiseList] = useState([]);
+  const [transportActive, setTransportActive] = useState({
+    state1: false,
+    state2: false,
+    state3: false,
+  });
   const getProductInfoData = async () => {
     const res = await axios.get("data.json");
     const productTypeList = res.data[0].TypeList;
@@ -55,10 +61,18 @@ function App() {
   return (
     <div className="tab_container">
       <div className="tab_innerContainer">
-        <Transport />
-        {trainList.length > 0 && <Train trainList={trainList} />}
-        {cruiseList.length > 0 && <Cruise cruiseList={cruiseList} />}
+        <Transport
+          setTransportActive={setTransportActive}
+          transportActive={transportActive}
+        />
+        {trainList.length > 0 && transportActive.state1 && (
+          <Train trainList={trainList} />
+        )}
+        {cruiseList.length > 0 && transportActive.state3 && (
+          <Cruise cruiseList={cruiseList} />
+        )}
         {productList.length > 0 && <Product productList={productList} />}
+        {marketList.length > 0 && <Market marketList={marketList} />}
       </div>
     </div>
   );
