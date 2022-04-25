@@ -16,7 +16,7 @@ function App() {
     state2: false,
     state3: false,
   });
-  const getProductInfoData = async () => {
+  /* const getProductInfoData = async () => {
     const res = await axios.get("data.json");
     const productTypeList = res.data[0].TypeList;
     productTypeList.forEach((item) => {
@@ -52,11 +52,50 @@ function App() {
         });
       }
     });
+  }; */
+  const test = (item, code) => {
+    const typeList = item.TypeList;
+    typeList.forEach((item2) => {
+      if (item2.TypeCode === "07") {
+        const cruiseGroupList = item2.GroupList;
+        cruiseGroupList.forEach((item3) => {
+          setCruiseList((prevData) => [...prevData, ...item3.TagList]);
+        });
+      } else if (item2.TypeCode === "08") {
+        const transportGroupList = item2.GroupList;
+        transportGroupList.forEach((item3) => {
+          setTrainList((prevData) => [...prevData, ...item3.TagList]);
+        });
+      } else {
+        const groupList = item2.GroupList;
+        groupList.forEach((item3) => {
+          switch (code) {
+            case "01":
+              setProductList((prevData) => [...prevData, ...item3.TagList]);
+              break;
+            case "02":
+              setMarketList((prevData) => [...prevData, ...item3.TagList]);
+              break;
+            default:
+              break;
+          }
+        });
+      }
+    });
   };
+  const getInfoData = async () => {
+    const res = await axios.get("data.json");
+    const data = res.data;
+    data.forEach((item) => {
+      test(item, item.CategoryCode);
+    });
+  };
+
   useEffect(() => {
-    getProductInfoData();
+    /*  getProductInfoData();
     getMarketInfoData();
-    getTrainInfoData();
+    getTrainInfoData(); */
+    getInfoData();
   }, []);
   return (
     <div className="tab_container">
